@@ -19,4 +19,13 @@ function bootstrapstarter_wp_setup() {
     add_theme_support( 'title-tag' );
 }
 add_action( 'after_setup_theme', 'bootstrapstarter_wp_setup' );
+
+function register_menus_for_work_mangement() {
+  register_nav_menus(
+    array(
+      'main-menu' => __( 'Main Menu' )//Locations I have added one only main
+    )
+  );
+}
+add_action( 'init', 'register_menus_for_work_mangement' );
 ?>
